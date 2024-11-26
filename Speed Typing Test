@@ -1,0 +1,20 @@
+import time
+
+def speed_typing_test():
+    prompt = "The quick brown fox jumps over the lazy dog."
+    print("Type this sentence as fast as you can:")
+    print(prompt)
+    
+    input("Press Enter when you are ready to start.")
+    
+    start_time = time.time()
+    user_input = input("Type the sentence: ")
+    end_time = time.time()
+    
+    elapsed_time = end_time - start_time
+    words_typed = len(user_input.split())
+    typing_speed = words_typed / (elapsed_time / 60)  # Words per minute
+    
+    print("\nYou typed at a speed of {:.2f} words per minute.".format(typing_speed))
+
+speed_typing_test()
